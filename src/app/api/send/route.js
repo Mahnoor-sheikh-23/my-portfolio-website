@@ -14,7 +14,6 @@ export async function POST(req, res){
       <p>Thank You ForContacting Us!</p>
       <p>New Message Sumbitted!</p>
       <p>{message}</p>
-
       </>
     });
     if (error) {

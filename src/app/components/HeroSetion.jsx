@@ -3,6 +3,7 @@ import React from 'react';
 import Image from 'next/image';
 import { TypeAnimation } from 'react-type-animation';
 import { motion } from "framer-motion";
+import Link from 'next/link';
 
 
 const HeroSetion = () => {
@@ -35,10 +36,18 @@ const HeroSetion = () => {
                     </h1>
                     <p className='text-white text-base sm:text-lg lg:text-xl mb-6'>&apos;Hi! I&apos;m Mahnoor , a full stack developer with a passion for crafting efficient and scalable web applications. I love turning ideas into reality using code and design.&apos;</p>
                     <div>
-                        <button className='px-6 py-3 mb-4  w-full sm:w-fit rounded-full bg-white mr-4 bg-gradient-to-br from-primary-500 via-purple-500 to-secondary-500 hover:bg-slate-200 text-white'>Hire Me</button>
-                        <button className='px-1 py-1 w-full sm:w-fit rounded-full mr-4 bg-gradient-to-br from-primary-500  via-primary-500 to-secondary-500 hover:bg-slate-800 text-white '>
-                            <span className='block bg-[#121212] hover:bg-slate-800 rounded-full px-5 py-2'>Download CV </span>
-                        </button>
+                        <a href="mailto:mahnooradnan479@gmail.com?subject=Hire%20Me&body=I%20would%20like%20to%20discuss%20a%20project"
+                            target="_blank"
+                            rel="noopener noreferrer">
+                            <button className='px-6 py-3 mb-4 w-full sm:w-fit rounded-full bg-white mr-4 bg-gradient-to-br from-primary-500 via-purple-500 to-secondary-500 hover:bg-slate-200 text-white'>
+                                Hire Me
+                            </button>
+                        </a>
+                        <Link href="https://jocular-croquembouche-f006b6.netlify.app/">
+                            <button className='px-1 py-1 w-full sm:w-fit rounded-full mr-4 bg-gradient-to-br from-primary-500  via-primary-500 to-secondary-500 hover:bg-slate-800 text-white '>
+                                <span className='block bg-[#121212] hover:bg-slate-800 rounded-full px-5 py-2'>Download Resume </span>
+                            </button>
+                        </Link>
                     </div>
                 </motion.div>
                 <motion.div
