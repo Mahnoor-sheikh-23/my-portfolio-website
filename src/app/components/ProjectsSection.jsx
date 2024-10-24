@@ -35,12 +35,12 @@ const projectsData = [
     },
     {
         id: 4,
-        title: "ECommerce Website of Oh Pair!",
-        description: "Discover the latest in footwear fashion with Oh Pair!, your go-to online destination for stylish and comfortable shoes. Whether you're looking for casual sneakers, elegant heels, or sporty trainers, we have something for every occasion. Our user-friendly website offers a seamless shopping experience, with easy navigation, detailed product views, and secure checkout. Each product is carefully curated to meet the highest standards of quality and style. Plus, enjoy exclusive deals and fast shipping right to your door. Step up your shoe game with Oh Pair!",
-        image: "/images/shoes.jpg",
+        title: "Resume Builder!",
+        description: "Developed a web-based application that allows users to create professional resumes through an intuitive and interactive interface. The app offers customizable templates, real-time previews, and the ability to download the final resume in PDF format. Users can easily input personal details, work experience, education, and skills, with a focus on providing a seamless and user-friendly experience. The platform ensures responsive design, making it accessible across various devices.",
+        image: "/images/hqdefault.jpg",
         tag: ["All", "Frontend"],
-        gitUrl: "/",
-        previewUrl: "https://www.linkedin.com/in/growthmonii/recent-activity/all/"
+        gitUrl: "https://github.com/Mahnoor-sheikh-23/resume-builder",
+        previewUrl: "https://moni-resume.netlify.app/"
     },
     {
         id: 5,

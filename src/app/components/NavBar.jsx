@@ -50,7 +50,7 @@ const NavBar = () => {
                         {
                             navLinks.map((link, index) => (
                                 <li key={index}>
-                                    <NavaLink href={link.path} title={link.title} id={link.id} />
+                                    <NavaLink href={link.id} title={link.title} id={link.id} />
                                 </li>
                             ))
                         }
