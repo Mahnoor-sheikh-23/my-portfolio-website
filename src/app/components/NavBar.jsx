@@ -1,24 +1,18 @@
 "use client";
 import React, { useState } from 'react'
 import Link from 'next/link';
-import NavaLink from './NavLink';
-import MenuOverlay from './MenuOverlay';
-
 const navLinks = [
     {
         title: "About",
-        path: "#about",
-        id:"#about"
+        path: "/about"
     },
     {
         title: "Projects",
-        path: "#projects",
-        id:"#projects"
+        path: "/projects"
     },
     {
         title: "Contact",
-        path: "#contact",
-        id : "#contact"
+        path: "/contact"
     },
 ]
 
@@ -34,11 +28,11 @@ const NavBar = () => {
                 <div className=' mobile-menu block md:hidden'>
                     {
                         !navbarOpen ? (
-                            <button onClick={()=> setNavbarOpen(true)} className=' flex  items-center px-3 py-2 border rounded border-slate-200  text-slate-200 hover:text-white hover:border-white'>
+                            <button onClick={() => setNavbarOpen(true)} className=' flex  items-center px-3 py-2 border rounded border-slate-200  text-slate-200 hover:text-white hover:border-white'>
                                 <i className="fa-solid fa-bars"></i>
                             </button>
                         ) : (
-                            <button onClick={()=> setNavbarOpen(false)} className=' flex  items-center px-3 py-2 border rounded border-slate-200  text-slate-200 hover:text-white hover:border-white'>
+                            <button onClick={() => setNavbarOpen(false)} className=' flex  items-center px-3 py-2 border rounded border-slate-200  text-slate-200 hover:text-white hover:border-white'>
                                 <i className="fa-solid fa-xmark"></i>
                             </button>
                         )
@@ -47,19 +41,36 @@ const NavBar = () => {
                 </div>
                 <div className='menu hidden md:block md:w-auto' id='navbar'>
                     <ul className='flex p-4 md:p-0 md:flex-row md:space-x-10 mt-0  mr-9'>
-                        {
-                            navLinks.map((link, index) => (
-                                <li key={index}>
-                                    <NavaLink href={link.id} title={link.title} id={link.id} />
-                                </li>
-                            ))
-                        }
+                        <Link href={"/about"}>
+                            <li className='block py-2 pl-3 pr-4 text-[#ADB7BE] sm:text-xl rounded md:p-0 hover:text-white'>About</li>
+                        </Link>
+                        <Link href={"/projects"}>
+                            <li className='block py-2 pl-3 pr-4 text-[#ADB7BE] sm:text-xl rounded md:p-0 hover:text-white'>Projects</li>
+                        </Link>
+                        <Link href={"/contact"}>
+                            <li className='block py-2 pl-3 pr-4 text-[#ADB7BE] sm:text-xl rounded md:p-0 hover:text-white'>Contact</li>
+                        </Link>
+
+
                     </ul>
                 </div>
             </div>
             {
-               navbarOpen ? <MenuOverlay links={navLinks}/> : null
+                navbarOpen ? (
+                    <ul className='flex flex-col items-center py-4'>
+                        {
+                            navLinks && navLinks.map((link, index) => (
+                                <li key={index} className='py-2'>
+                                    <Link href={link.path} title={link.title} className="text-[#ADB7BE] sm:text-lg hover:text-white">
+                                        {link.title}
+                                    </Link>
+                                </li>
+                            ))
+                        }
+                    </ul>
+                ) : null
             }
+
         </nav>
     )
 }
