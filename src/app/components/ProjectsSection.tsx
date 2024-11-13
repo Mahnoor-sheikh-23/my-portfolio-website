@@ -66,7 +66,7 @@ const ProjectsSection = () => {
     const [tags, setTags] = useState("All");
     const ref = useRef(null);
     const isInView = useInView(ref, {once: true });
-    const handleTagChange = (newTag) => {
+    const handleTagChange = (newTag :string) => {
         setTags(newTag)
     }
 
@@ -75,8 +75,8 @@ const ProjectsSection = () => {
     )
 
     const cardVariant = {
-        initial : {y:50 , opcatiy : 0 }, 
-        animate : {y:0 , opcatiy : 1},
+        initial : {y:50 , opacity : 0 }, 
+        animate : {y:0 , opacity : 1},
     };
     return (
         <section id='projects'>

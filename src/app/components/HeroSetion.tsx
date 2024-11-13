@@ -21,7 +21,7 @@ const HeroSetion = () => {
                         <TypeAnimation
                             sequence={[
                                 'Mahnoor',
-                                1000, // wait 1s before replacing "Mice" with "Hamsters"
+                                1000, 
                                 'Frontend Developer ',
                                 1000,
                                 'Backend Developer ',
@@ -64,6 +64,7 @@ const HeroSetion = () => {
                             className='absolute  transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 rounded-full '
                             width={400}
                             height={300}
+                            alt=''
 
                         />
                     </motion.div>

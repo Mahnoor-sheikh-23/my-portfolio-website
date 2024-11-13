@@ -37,7 +37,6 @@ const NavBar = () => {
                             </button>
                         )
                     }
-
                 </div>
                 <div className='menu hidden md:block md:w-auto' id='navbar'>
                     <ul className='flex p-4 md:p-0 md:flex-row md:space-x-10 mt-0  mr-9'>
@@ -50,7 +49,6 @@ const NavBar = () => {
                         <Link href={"/contact"}>
                             <li className='block py-2 pl-3 pr-4 text-[#ADB7BE] sm:text-xl rounded md:p-0 hover:text-white'>Contact</li>
                         </Link>
-
 
                     </ul>
                 </div>

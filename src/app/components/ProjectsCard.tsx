@@ -2,7 +2,16 @@ import React from 'react';
 import  Link from 'next/link';
 
 
-const ProjectsCard = ({ imgUrl, title, description,gitUrl , previewUrl }) => {
+
+type ProjectsCardProps = {
+    imgUrl: string;
+    title: string;
+    description: string;
+    gitUrl: string;
+    previewUrl: string;
+  };
+
+const ProjectsCard: React.FC<ProjectsCardProps> = ({ imgUrl, title, description, gitUrl, previewUrl }) => {
     return (
         <div>
             <div className='h-52 md:h-72 rounded-t-xl relative  group'

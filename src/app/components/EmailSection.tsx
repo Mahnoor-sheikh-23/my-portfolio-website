@@ -3,14 +3,15 @@ import React, { useState } from 'react';
 import Link from 'next/link';
 
 const EmailSection = () => {
-    const [emailSumbitted , setEmailSumbitted] = useState(false)
-
-    const handleSumbit = async (e) => {
+    const [emailSumbitted, setEmailSumbitted] = useState(false)
+    const handleSumbit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
+
+
         let data = {
-            email: e.target.email.value,
-            subject: e.target.subject.value,
-            message: e.target.message.value
+            email: (e.target as HTMLFormElement).email.value,
+            subject: (e.target as HTMLFormElement).subject.value,
+            message: (e.target as HTMLFormElement).message.value,
         }
 
         let JSONdATA = JSON.stringify(data)
@@ -27,6 +28,7 @@ const EmailSection = () => {
         const resData = await response.json();
         if (response.status === 200) {
             console.log("message sent");
+            (e.target as HTMLFormElement).reset();
             setEmailSumbitted(true)
             JSONdATA = " "
         }
@@ -50,7 +52,7 @@ const EmailSection = () => {
                         <i className="fa-brands fa-linkedin text-4xl ml-6"></i>
                     </Link>
                     <Link href={"https://www.instagram.com/mahnoor_adnan14/"}>
-                    <i class="fa-brands fa-instagram text-4xl ml-6"></i>
+                        <i className="fa-brands fa-instagram text-4xl ml-6"></i>
                     </Link>
                 </div>
             </div>
@@ -100,7 +102,7 @@ const EmailSection = () => {
                         Send Message
                     </button>
                     {
-                        emailSumbitted&&(
+                        emailSumbitted && (
                             <p className='text-green-500 text-sm mt-2'>Email Sent Successfully !!</p>
                         )
                     }
